@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сен үчүн ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* =========================
+   НЕГИЗГИ БӨЛҮК
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #faf6f0;
+    color: #333;
+    padding: 20px 15px 40px;
+}
+/* =========================
+   БАШКЫ СҮРӨТ
+========================= */
+.header-card {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.main-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #7a4a58;
+    margin-top: 15px;
+}
+/* =========================
+   СҮРӨТТӨР
+========================= */
+.gallery {
+    max-width: 500px;
+    margin: auto;
+}
+.card {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+/* Ар бир сүрөттүн фону башка түстө */
+.card:nth-child(1) {
+    background: #f9dfe3;
+}
+.card:nth-child(2) {
+    background: #e5def3;
+}
+.card:nth-child(3) {
+    background: #f7e2c5;
+}
+.card img {
+    width: 100%;
+    display: block;
+}
+/* Сүрөттөрдүн алдындагы сүйүү сөздөрү */
+.card-text {
+    padding: 18px 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #613842;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+/* =========================
+   СЮРПРИЗ
+========================= */
+.surprise {
+    max-width: 500px;
+    margin: 35px auto 0;
+    background: white;
+    border-radius: 20px;
+    padding: 25px 15px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.surprise h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    color: #7a4a58;
+    margin-bottom: 5px;
+}
+.instruction {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.5;
+}
+/* =========================
+   СӨЗДӨР
+========================= */
+.words {
+    min-height: 50px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.word {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: #7a4a58;
+    animation: wordAppear 0.5s ease;
+}
+@keyframes wordAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* =========================
+   ШАРЛАРДЫН АЙМАГЫ
+========================= */
+.balloon-area {
+    position: relative;
+    height: 350px;
+    margin-top: 5px;
+    transition: height 0.8s ease;
+}
+/* =========================
+   ШАР
+========================= */
+.balloon {
+    position: absolute;
+    width: 60px;
+    height: 76px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 5;
+    box-shadow:
+        inset -8px -8px 14px rgba(0,0,0,0.10),
+        inset 8px 8px 14px rgba(255,255,255,0.25);
+    animation: float 3s ease-in-out infinite;
+    transition: filter 0.2s;
+}
+/* Шардын учу */
+.balloon::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    transform: rotate(45deg);
+}
+/* Шардын жиби */
+.balloon::after {
+    content: "";
+    position: absolute;
+    top: 75px;
+    width: 1px;
+    height: 55px;
+    background: #aaa;
+}
+/* =========================
+   ШАРЛАРДЫН ОРНОШУУСУ
+========================= */
+.b1 {
+    left: 7%;
+    top: 25px;
+    background: #d990a1;
+}
+.b2 {
+    left: 40%;
+    top: 15px;
+    background: #c99aac;
+}
+.b3 {
+    right: 7%;
+    top: 45px;
+    background: #dda58f;
+}
+.b4 {
+    left: 20%;
+    top: 145px;
+    background: #b98fa5;
+}
+.b5 {
+    right: 22%;
+    top: 165px;
+    background: #d69d87;
+}
+.b6 {
+    left: 6%;
+    top: 260px;
+    background: #c68fa2;
+}
+.b7 {
+    left: 45%;
+    top: 275px;
+    background: #dda18c;
+}
+.b8 {
+    right: 5%;
+    top: 255px;
+    background: #c69aaa;
+}
+/* =========================
+   КЫЙМЫЛ
+========================= */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+/* =========================
+   КИЙИНКИ ШАР
+========================= */
+.active {
+    animation:
+        float 3s ease-in-out infinite,
+        glow 1.1s ease-in-out infinite;
+}
+@keyframes glow {
+    50% {
+        filter: brightness(1.3);
+    }
+}
+/* =========================
+   БЕКИТИЛГЕН ШАРЛАР
+========================= */
+.locked {
+    opacity: 0.35;
+    cursor: default;
+}
+/* =========================
+   ШАРДЫН ЖАРЫЛЫШЫ
+========================= */
+.popped {
+    pointer-events: none;
+    animation: pop 0.4s forwards;
+}
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+/* =========================
+   АКЫРКЫ БӨЛҮК
+========================= */
+.final {
+    display: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: #7a4a58;
+    padding: 0 10px 10px;
+    animation: finalAppear 1s ease;
+}
+.final-heart {
+    display: block;
+    font-size: 3rem;
+    margin-top: 5px;
+    animation: heartbeat 1.2s infinite;
+}
+@keyframes finalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+</style>
+</head>
+<body>
+<!-- =========================
+     БАШКЫ БӨЛҮК
+========================= -->
+<div class="header-card">
+    <img
+        src="main.PNG"
+        class="main-img"
+        alt="Башкы сүрөт"
+    >
+    <h1>
+        Жолукпай калсаң эгер,
+Сендейди табар белем?✨
+    </h1>
+</div>
+<!-- =========================
+     СҮРӨТТӨР
+========================= -->
+<div class="gallery">
+    <!-- БИРИНЧИ СҮРӨТ -->
+    <div class="card">
+        <img
+            src="photo1.PNG"
+            alt="Сүрөт"
+        >
+        <div class="card-text">
+            Мен да сага аппак сүйүү берейин ай,
+   Сен да мага аппак сүйүү тартуула.
+        </div>
+    </div>
+    <!-- ЭКИНЧИ СҮРӨТ -->
+    <div class="card">
+        <img
+            src="photo2.PNG"
+            alt="Сүрөт"
+        >
+        <div class="card-text">
+            Эргүүгө чындап толмокмун
+Мен эң бактылуу жан болмокмун
+Эгерде мага өзүң тең болсоң
+Түбөлүк өмүр жарым сен болсоң
+        </div>
+    </div>
+    <!-- ҮЧҮНЧҮ СҮРӨТ -->
+    <div class="card">
+        <img
+            src="photo3.PNG"
+            alt="Аэропорт"
+        >
+        <div class="card-text">
+            Сага арнаган ак сүйүүнүн,
+Кадырына жетесиңби?
+Макул болуп мени менен,
+Токтогулга кетесиңби?
+        </div>
+    </div>
+</div>
+<!-- =========================
+     СЮРПРИЗ
+========================= -->
+<div class="surprise">
+    <h2>
+        Кичинекей сюрприз💗
+    </h2>
+    <div class="instruction">
+        Шарларды ирети менен бас 🎈
+        <br>
+        1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+    </div>
+    <!-- БУЛ ЖЕРГЕ СӨЗДӨР ЧЫГАТ -->
+    <div
+        class="words"
+        id="words"
+    ></div>
+    <!-- ШАРЛАР -->
+    <div
+        class="balloon-area"
+        id="balloonArea"
+    >
+        <div
+            class="balloon b1 active"
+            id="balloon1"
+            onclick="popBalloon(1)"
+        >
+            1
+        </div>
+        <div
+            class="balloon b2 locked"
+            id="balloon2"
+            onclick="popBalloon(2)"
+        >
+            2
+        </div>
+        <div
+            class="balloon b3 locked"
+            id="balloon3"
+            onclick="popBalloon(3)"
+        >
+            3
+        </div>
+        <div
+            class="balloon b4 locked"
+            id="balloon4"
+            onclick="popBalloon(4)"
+        >
+            4
+        </div>
+        <div
+            class="balloon b5 locked"
+            id="balloon5"
+            onclick="popBalloon(5)"
+        >
+            5
+        </div>
+        <div
+            class="balloon b6 locked"
+            id="balloon6"
+            onclick="popBalloon(6)"
+        >
+            6
+        </div>
+        <div
+            class="balloon b7 locked"
+            id="balloon7"
+            onclick="popBalloon(7)"
+        >
+            7
+        </div>
+        <div
+            class="balloon b8 locked"
+            id="balloon8"
+            onclick="popBalloon(8)"
+        >
+            8
+        </div>
+    </div>
+    <!-- АКЫРКЫ СӨЗ -->
+    <div
+        class="final"
+        id="final"
+    >
+        Дүйнөдөгү эң сулуу кыз
+        <span class="final-heart">
+            ❤️
+        </span>
+    </div>
+</div>
+<script>
+/* =========================
+   ЖӨНДӨӨЛӨР
+========================= */
+let currentNumber = 1;
+/* Шарлар ачылган сайын чыга турган сөздөр */
+const words = [
+    "Мен",
+    "сени",
+    "сүйөм",
+    "баарынан",
+    "катуу",
+    "жана",
+    "ар дайым",
+    "сени күтөм"
+];
+/* =========================
+   ШАРДЫ БАСУУ
+========================= */
+function popBalloon(number) {
+    /* Кийинки шарды алдын ала басууга болбойт */
+    if (number !== currentNumber) {
+        return;
+    }
+    /* Шарды табабыз */
+    const balloon =
+        document.getElementById(
+            "balloon" + number
+        );
+    /* Сөздү түзөбүз */
+    const word =
+        document.createElement("span");
+    word.className = "word";
+    word.innerText =
+        words[number - 1];
+    document
+        .getElementById("words")
+        .appendChild(word);
+    /* Шар жарылат */
+    balloon.classList.remove("active");
+    balloon.classList.add("popped");
+    /* Кийинки номер */
+    currentNumber++;
+    /* Кийинки шарды ачабыз */
+    if (currentNumber <= 8) {
+        const next =
+            document.getElementById(
+                "balloon" + currentNumber
+            );
+        next.classList.remove("locked");
+        next.classList.add("active");
+    }
+    /* =========================
+       АКЫРКЫ ШАР
+    ========================= */
+    if (currentNumber === 9) {
+        /* Бир аз күтөбүз */
+        setTimeout(function() {
+            /* Шарлар турган жерди кичирейтебиз */
+            document
+                .getElementById("balloonArea")
+                .style.height = "20px";
+            /* Акыркы сөздү көрсөтөбүз */
+            document
+                .getElementById("final")
+                .style.display = "block";
+        }, 500);
+    }
+}
+</script>
+</body>
+</html>
